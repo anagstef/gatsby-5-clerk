@@ -7,7 +7,7 @@ interface ContactBody {
 const handler = withAuth(async (req, res) => {
   const { userId } = req.auth;
   if (!userId) {
-    res.status(401).send('Unauthorized');
+    res.status(401).send('401 Unauthorized');
     return;
   }
   const users = await clerkClient.users.getUserList();
