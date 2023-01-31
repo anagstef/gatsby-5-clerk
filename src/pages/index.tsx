@@ -34,6 +34,8 @@ const IndexPage: React.FC<PageProps> = () => {
       <br />
       <div><a href="/api/hello-api">API Example</a></div>
       <br />
+      <div><a href="/api/restricted">API Example that needs auth</a></div>
+      <br />
       <SignedIn>
         <UserButton />
       </SignedIn>

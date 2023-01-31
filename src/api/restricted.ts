@@ -5,6 +5,11 @@ interface ContactBody {
 }
 
 const handler = withAuth(async (req, res) => {
+  const { userId } = req.auth;
+  if (!userId) {
+    res.status(401).send('Unauthorized');
+    return;
+  }
   const users = await clerkClient.users.getUserList();
   res.send({ title: `We have ${users.length} users`, auth: req.auth });
 });
