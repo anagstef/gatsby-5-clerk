@@ -30,6 +30,8 @@ const IndexPage: React.FC<PageProps> = () => {
         <span style={headingAccentStyles}>Gatsby 5 with Clerk! 🎉🎉🎉</span>
       </h1>
       <br />
+      <div><a href="/protected">Simple protected page</a></div>
+      <br />
       <div><a href="/ssr">SSR Example</a></div>
       <br />
       <div><a href="/api/hello-api">API Example</a></div>
@@ -41,9 +43,6 @@ const IndexPage: React.FC<PageProps> = () => {
       </SignedIn>
       <SignedOut>
         <SignIn />
-        <br />
-        <br />
-        <SignUp />
       </SignedOut>
     </main>
   )
@@ -51,4 +50,4 @@ const IndexPage: React.FC<PageProps> = () => {
 
 export default IndexPage
 
-export const Head: HeadFC = () => <title>Home Page</title>
+export const Head: HeadFC = () => <title>Gatsby 5 Clerk</title>
